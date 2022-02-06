@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { getPokemon } from "../api/";
+import { getSpecies } from "../api/";
 
-const SinglePokemon = ({ data }) => {
-  console.log(data);
+const SinglePokemon = ({ data, image }) => {
+  const [species, setSpecies] = useState([]);
+
+  const name = data.name;
+
   return (
     <header>
-      <h1>Single Pokemon Component</h1>
+      <h1>{name}</h1>
+      <img src={image}></img>
     </header>
   );
 };
