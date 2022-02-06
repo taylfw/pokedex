@@ -14,7 +14,7 @@ import { Header, SinglePokemon } from "./components";
 const App = () => {
   const [data, setData] = useState({});
   const [sprites, setSprites] = useState({});
-  const [description, setDescription] = useState({});
+  const [description, setDescription] = useState("");
 
   const bulby = async () => {
     const bulbaData = await getPokemon();
@@ -36,14 +36,14 @@ const App = () => {
   }, []);
 
   console.log(sprites.front_default);
-  console.log(description.flavor_text_entries);
+  console.log(description);
 
   const image = sprites.front_default;
   return (
     <Router>
       <div id="App">
         <Header />
-        <SinglePokemon data={data} image={image} />
+        <SinglePokemon data={data} image={image} description={description} />
       </div>
     </Router>
   );
