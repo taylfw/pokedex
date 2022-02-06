@@ -38,7 +38,7 @@ export async function getSprites() {
 export async function getDescription() {
   try {
     const { data } = await axios.get(`${SPECIES}/1`);
-    return data;
+    return data.flavor_text_entries[0].flavor_text;
   } catch (error) {
     console.log(error);
     throw error;
