@@ -16,7 +16,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import { Header, SinglePokemon } from "./components";
+import { Header, SinglePokemon, AllPokemon } from "./components";
 
 const App = () => {
   const [data, setData] = useState({});
@@ -40,34 +40,6 @@ const App = () => {
     bulbaDescription ? setDescription(bulbaDescription) : null;
   };
 
-  // const urlData = async () => {
-  //   const url = await getAllPokemonUrl();
-  //   if (url) {
-  //     setUrl(url.results);
-  //   } else {
-  //     console.log("data didn't come through");
-  //   }
-  // };
-
-  // const allPokeStufftake1 = async () => {
-  //   // console.log("can is see this 1");
-
-  //   // console.log(url, "inside function");
-  //   try {
-  //     const pokeDetails = url.map((poke) => {
-  //       // console.log("can is see this 2");
-  //       const pokemon = getEachPokemon(poke.url);
-  //       return pokemon;
-  //     });
-
-  //     // console.log(pokeDetails, "hey!");
-  //     setAllPokemon(pokeDetails);
-  //   } catch (error) {
-  //     console.log(error);
-  //     throw error;
-  //   }
-  // };
-
   const allPokeStuff = async () => {
     const url = await getAllPokemonUrl();
     const dataResults = url.results;
@@ -82,7 +54,7 @@ const App = () => {
     setAllPokemon(pokeArray);
   };
 
-  console.log(allPokemon);
+  // console.log(allPokemon);
 
   useEffect(() => {
     bulby(), bulbySprites(), bulbyDescription(), allPokeStuff();
@@ -90,17 +62,22 @@ const App = () => {
 
   const image = sprites.front_default;
 
-  // trying to get a list of all pokemon
-
-  // console.log(url.results, "url data");
-
-  // console.log(allPokemon, "all pokemon");
-
   return (
     <Router>
       <div id="App">
         <Header />
-        <SinglePokemon data={data} image={image} description={description} />
+        <Switch>
+          <Route path="/single_pokemon">
+            <SinglePokemon
+              data={data}
+              image={image}
+              description={description}
+            />
+          </Route>
+          <Route path="/poke_list">
+            <AllPokemon allPokemon={allPokemon} />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
