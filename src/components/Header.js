@@ -5,7 +5,7 @@ import { getPokemon } from "../api/";
 const Header = () => {
   return (
     <header>
-      <h1>Pokedex</h1>
+      <h1 className="pokeHeader">Pokedex</h1>
     </header>
   );
 };

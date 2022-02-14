@@ -8,7 +8,7 @@ const PokemonCard = ({ pokemon }) => {
   return (
     <div>
       <Link to={"/single_pokemon"}>
-        <p>{name}</p>
+        <p className="pokeName">{name}</p>
         <img src={pokemon.sprites.back_default} />
       </Link>
     </div>

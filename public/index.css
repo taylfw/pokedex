@@ -1,0 +1,12 @@
+@font-face {
+  font-family: pokeFont;
+  src: url(PokemonGb-RAeo.ttf);
+}
+
+.pokeName {
+  font-family: pokeFont;
+}
+
+.pokeHeader {
+  font-family: pokeFont;
+}
