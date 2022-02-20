@@ -18,8 +18,6 @@ import {
 
 import { Header, SinglePokemon, AllPokemon } from "./components";
 
-// GIT TEST
-
 const App = () => {
   const [data, setData] = useState({});
   const [sprites, setSprites] = useState({});
