@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import { PokemonCard } from ".";
 
 const AllPokemon = ({ allPokemon }) => {
-  console.log(allPokemon);
-
   return (
     <div>
       {allPokemon && allPokemon.length
