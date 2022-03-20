@@ -6,6 +6,7 @@ import { NavLinks } from "./HeaderElements";
 const Header = () => {
   return (
     <header>
+
       <NavLink
         to="/poke_list"
         smooth={true}
@@ -16,6 +17,7 @@ const Header = () => {
       >
         Poke List
       </NavLink>
+
     </header>
   );
 };

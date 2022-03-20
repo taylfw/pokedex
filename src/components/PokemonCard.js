@@ -7,6 +7,7 @@ const PokemonCard = ({ pokemon }) => {
     <div>
       <Link to={`/single_pokemon/${pokemon.id}`}>
         <p>{name}</p>
+
         <img src={pokemon.sprites.back_default} />
       </Link>
     </div>

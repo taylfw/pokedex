@@ -1,3 +1,4 @@
+
 body {
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdU0Im_4jqB_XPEj6EwdFqZIH_CKnIMwx21kcyC32JErnBgLYpacfd4V09vfa5Fyy-FOg&usqp=CAU")
     no-repeat center center fixed;
@@ -5,4 +6,17 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+@font-face {
+  font-family: pokeFont;
+  src: url(PokemonGb-RAeo.ttf);
+}
+
+.pokeName {
+  font-family: pokeFont;
+}
+
+.pokeHeader {
+  font-family: pokeFont;
+
 }
