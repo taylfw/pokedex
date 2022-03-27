@@ -9,11 +9,12 @@ const SinglePokemon = ({ allPokemon }) => {
 
   console.log(pokemon);
 
-  const name = pokemon.name;
-  const type = pokemon.types;
+  if(pokemon){
 
-  return (
-    <div>
+    const name = pokemon.name;
+    const type = pokemon.types;
+    return (
+      <div>
       <h1>{name}</h1>
       <img src={pokemon.sprites.front_default} />
       {type.map((eachType, idx) => {
@@ -25,6 +26,13 @@ const SinglePokemon = ({ allPokemon }) => {
       })}
     </div>
   );
+} else {
+  return (
+    <div>
+      <h1>Loading...</h1>
+    </div>
+  )
+}
 };
 
 export default SinglePokemon;
