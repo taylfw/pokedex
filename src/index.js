@@ -16,7 +16,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import { Header, SinglePokemon, AllPokemon } from "./components";
+import { Home, Header, SinglePokemon, AllPokemon } from "./components";
 
 const App = () => {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -46,6 +46,9 @@ const App = () => {
       <div id="App">
         <Header />
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/single_pokemon/:id">
             <SinglePokemon allPokemon={allPokemon} />
           </Route>

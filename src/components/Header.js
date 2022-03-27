@@ -7,14 +7,7 @@ const Header = () => {
   return (
     <header>
 
-      <NavLink
-        to="/poke_list"
-        smooth={true}
-        duration={500}
-        spy={true}
-        exact="true"
-        offset={-80}
-      >
+      <NavLink to="/poke_list">
         Poke List
       </NavLink>
 
